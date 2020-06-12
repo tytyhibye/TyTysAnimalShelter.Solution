@@ -9,6 +9,8 @@ namespace AnimalShelter.Models
     [StringLength(50)]
     public string Name { get; set; }
     [Required]
+    public string Gender { get; set; }
+    [Required]
     public string Species { get; set; }
     [Required]
     [StringLength(500, ErrorMessage = "Description must be less than 500 characters")]

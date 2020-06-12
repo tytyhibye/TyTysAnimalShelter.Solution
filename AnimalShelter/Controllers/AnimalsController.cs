@@ -25,11 +25,11 @@ namespace AnimalShelter.Controllers
 
     // GET api/Animals
     [HttpGet]
-    public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species) // binds query parameter to this string description
+    public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species, string gender) // binds query parameter to this string description
     {
       Console.WriteLine("We are inside Animals controller");
       var query = _db.Animals.AsQueryable(); // returns all Animals in database as a queryable LINQ object
-      if (name == null && species == null && age == 0)
+      if (name == null && species == null && age == 0 && gender == null)
       {
         return _db.Animals.ToList();
       }
@@ -44,6 +44,12 @@ namespace AnimalShelter.Controllers
       {
         query = query.Where(entry => entry.Name == name);
         // Console.WriteLine("we are in name");
+      }
+
+      if (gender != null)
+      {
+        query = query.Where(entry => entry.Gender == gender);
+        // Console.WriteLine("we are in gender");
       }
 
       if (species != null)
