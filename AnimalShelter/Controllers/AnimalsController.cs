@@ -62,6 +62,25 @@ namespace AnimalShelter.Controllers
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
 
+    /// <summary>
+    /// Creates a Animal.
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
+    ///
+    ///     POST /animals
+    ///     {
+    ///        "AnimalId": 1,
+    ///        "Name": "Herman",
+    ///        "Species": "Cat",
+    ///        "Description": "Very "Boop-able", loves bellyrubs."
+    ///        "Age": 5
+    ///     }
+    /// </remarks>
+    /// <param name="Animal"></param>
+    /// <returns>A newly created Animal</returns>
+    /// <response code="201">Returns the newly created Animal</response>
+    /// <response code="400">If the Animal is null</response>
     // POST api/Animals
     [HttpPost] // adds new api entry
     [ProducesResponseType(StatusCodes.Status201Created)]
@@ -72,6 +91,10 @@ namespace AnimalShelter.Controllers
       _db.SaveChanges();
     }
 
+    /// <summary>
+    /// Edits a specific animal.
+    /// </summary>
+    /// <param name="id"></param>
     // PUT api/Animals/5
     [HttpPut("{id}")] // edits existing api entry
     public void Put(int id, [FromBody] Animal animal)
@@ -81,6 +104,10 @@ namespace AnimalShelter.Controllers
       _db.SaveChanges();
     }
 
+    /// <summary>
+    /// Deletes a specific animal.
+    /// </summary>
+    /// <param name="id"></param>
     [HttpDelete("{id}")] // deletes existing api entry
     public void Delete(int id)
     {
