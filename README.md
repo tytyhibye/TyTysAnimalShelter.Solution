@@ -36,15 +36,11 @@ dotnet build
 ```sh
 dotnet watch run
 ``` 
-8. Go to your browser and enter the following url:
 
-```sh
-http://localhost:5000
-```
-9. The server is now live!
+**The server is now live!**
 
 ### _To Access the Swagger UI:_
-Add the following to the url of the local host:
+While the server is running, enter the following url into your browser:
 ```
 http://localhost:5000/swagger
 ```
