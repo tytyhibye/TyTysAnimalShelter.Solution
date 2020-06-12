@@ -40,10 +40,19 @@ dotnet watch run
 **The server is now live!**
 
 ### _To Access the Swagger UI:_
+
 While the server is running, enter the following url into your browser:
 ```
 http://localhost:5000/swagger
 ```
+
+Here you have the same capabilites as the [Postman](#postMan) application.
+### Swagger Functionality Includes:
+* **POST** requests to _user_ database to retrieve authentication token
+* **GET** requests to _animal_ database to return all/specific listings
+* **POST** requests to add or delete a database entry
+* **PUT** requests to edit an existing entry
+
 <hr />
 
 ### _MySQL Installation & Configuration:_
@@ -74,6 +83,8 @@ dotnet ef database update
 ```
 9. You should now be able to view the full project database in MySQL Workbench.
 <hr />
+
+<div id="postMan">
 
 ### _Postman Installation & Configuration:_
 
@@ -108,6 +119,8 @@ _Search Example:_
 ```sh
 http://localhost:5000/api/animals/?name=mr.meowgi
 ```
+
+</div>
 
 ## _Technology Used_
 

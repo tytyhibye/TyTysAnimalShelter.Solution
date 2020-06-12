@@ -85,8 +85,9 @@ namespace AnimalShelter.Controllers
     ///     POST /animals
     ///     {
     ///        "AnimalId": 1,
-    ///        "Name": "Herman",
+    ///        "Name": "Jennifur",
     ///        "Species": "Cat",
+    ///        "Gender": "Female",
     ///        "Description": "Very "Boop-able", loves bellyrubs."
     ///        "Age": 5
     ///     }
