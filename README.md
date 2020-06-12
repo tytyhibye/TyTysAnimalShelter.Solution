@@ -4,7 +4,7 @@
 
 ## _Description_
 
-TyTy's Animal Shelter is API access application where the user can view existing animals up for adoption or add new ones. Each entry includes the animal's Name, Species, Age, A brief Description, an image url and a date they arrived. Users can search the database for animals using either Name, Species, or Age. Only registered and authorized users have access to editing and/or deleting entries in the API.
+TyTy's Animal Shelter is an API access application where registered users can view existing animals up for adoption or add new ones. Each entry includes the animal's Name, Species, Gender, Age, A brief Description, and an optional image url. Users can filter their searches to return only specified animals.
 
 
 ## _Setup/Installation Requirements_ 
