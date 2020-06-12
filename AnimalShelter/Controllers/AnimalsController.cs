@@ -14,24 +14,24 @@ namespace AnimalShelter.Controllers
   [Produces("application/json")]
   [Route("api/[controller]")]
   [ApiController]
-  public class PlacesController : ControllerBase
+  public class AnimalsController : ControllerBase
   {
     private AnimalShelterContext _db;
 
-    public PlacesController(AnimalShelterContext db)
+    public AnimalsController(AnimalShelterContext db)
     {
       _db = db;
     }
 
-    // GET api/places
+    // GET api/Animals
     [HttpGet]
-    public ActionResult<IEnumerable<Place>> Get(int age, string name, string species) // binds query parameter to this string description
+    public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species) // binds query parameter to this string description
     {
-      Console.WriteLine("We are inside places controller");
-      var query = _db.Places.AsQueryable(); // returns all Places in database as a queryable LINQ object
+      Console.WriteLine("We are inside Animals controller");
+      var query = _db.Animals.AsQueryable(); // returns all Animals in database as a queryable LINQ object
       if (name == null && species == null && age == 0)
       {
-        return _db.Places.ToList();
+        return _db.Animals.ToList();
       }
 
       if (age > 0)
@@ -53,4 +53,11 @@ namespace AnimalShelter.Controllers
       }
 
       return query.ToList(); 
+    }
+
+    // GET api/Animals/5
+    [HttpGet("{id}")] //returns existing api entry
+    public ActionResult<Animal> Get(int id)
+    {
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
