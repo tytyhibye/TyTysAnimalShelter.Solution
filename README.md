@@ -9,7 +9,7 @@ TyTy's Animal Shelter is an API access application where registered users can vi
 
 ## _Setup/Installation Requirements_ 
 
-### _To Host the API Server:_
+### To Host the API Server:
 
 1. Clone this projects repository into your local directory following [these](https://www.linode.com/docs/development/version-control/how-to-install-git-and-clone-a-github-repository/) instructions.
 
@@ -39,19 +39,19 @@ dotnet watch run
 
 **The server is now live!**
 
-### _To Access the Swagger UI:_
+### To Access and Use Swagger UI:
 
 While the server is running, enter the following url into your browser:
 ```
 http://localhost:5000/swagger
 ```
 
-Here you have the same capabilites as the [Postman](#postMan) application.
+Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan) application.
 ### Swagger Functionality Includes:
 * **POST** requests to _user_ database to retrieve authentication token
 * **GET** requests to _animal_ database to return all/specific listings
-* **POST** requests to add or delete a database entry
-* **PUT** requests to edit an existing entry
+* **POST** requests to add or delete a database listing
+* **PUT** requests to edit an existing listing
 
 <hr />
 
