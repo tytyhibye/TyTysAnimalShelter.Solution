@@ -5,9 +5,11 @@
 ## _Description_
 
 TyTy's Animal Shelter is an API access application where registered users can view existing animals up for adoption or add new ones. Each entry includes the animal's Name, Species, Gender, Age, A brief Description, and an optional image url. Users can filter their searches to return only specified animals.
-
+<hr />
 
 ## _Setup/Installation Requirements_ 
+
+### _To Host the API Server:_
 
 1. Clone this projects repository into your local directory following [these](https://www.linode.com/docs/development/version-control/how-to-install-git-and-clone-a-github-repository/) instructions.
 
@@ -27,7 +29,7 @@ dotnet-script
 6. Open the repository, navigate to the containing folder of the project & Enter the following command to confirm build stability 
 
 ```sh
-dotnet run build 
+dotnet build 
 ```
 
 7. Within that same containing folder enter the following to open a live server w/auto updated viewing
@@ -37,21 +39,27 @@ dotnet watch run
 8. Go to your browser and enter the following url:
 
 ```sh
-http://localhost:5004
+http://localhost:5000
 ```
-### To Access the Swagger UI:
+9. The server is now live!
+
+### _To Access the Swagger UI:_
 Add the following to the url of the local host:
 ```
-http://localhost:5004/swagger
+http://localhost:5000/swagger
 ```
-### MySQL Installation & Configuration:
-1. Download the MySQL Community Server DMG file [here](https://dev.mysql.com/downloads/file/?id=484914) with the "No thanks, just start my download" link.
+<hr />
+
+### _MySQL Installation & Configuration:_
+1. Download the [MySQL Community Server DMG file](https://dev.mysql.com/downloads/file/?id=484914) with the _"No thanks, just start my download"_ link.
 2. On the configuration page of the installer select the following options:
 * Use legacy password encryption
 * Set your password
-3. Open the terminal and enter the command:
-*'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile
-4. Download the MySQL Workbench DMG file [here](https://dev.mysql.com/downloads/file/?id=484391)
+3. Open your terminal and enter the command:
+```
+'export PATH="/usr/local/mysql/bin:$PATH"' >> ~/.bash_profile
+```
+4. Download the [MySQL Workbench DMG file](https://dev.mysql.com/downloads/file/?id=484391)
 5. Open Local Instance 3306 with the password you set.
 6. Within the project directory, create a file called "appsettings.json" and fill it with the following code:
 ```sh
@@ -69,17 +77,18 @@ dotnet ef migrations add DATABASE
 dotnet ef database update
 ```
 9. You should now be able to navigate through the full functionality of the project.
+<hr />
 
-### Postman Installation & Configuration
+### _Postman Installation & Configuration:_
 
 Postman is another resource for testing API calls, follow these steps to utilize this program:
-1. Download [Postman](https://www.postman.com/downloads/). Sign up is _not_ required.
-2. Once the project is hosting to local server 5000, open Postman.
+1. Download [Postman](https://www.postman.com/downloads/). (Sign up is _not_ required).
+2. Once the project API is live on _localhost:5000_, open Postman.
 3. To get your authorization token, make a **POST** request to _localhost:5000/api/users/authenticate_. The **Body** of the request will include the login information I've provided for you in the _users_ data table in MySQL Workbench.
 
 <div style="display: flex; justify-content: center"><img src="https://i.ibb.co/6gRmVRk/post-rq.jpg"></div>
 
-4. If sent correctly, your login information and Token will be displayed below like this:
+4. Click **Send**, your login information and Token will be displayed below:
 
 <div style="display: flex; justify-content: center"><img src="https://i.ibb.co/Lrt3rKR/token.jpg"></div>
 
@@ -113,12 +122,13 @@ You can filter your search using the following parameter keys:
 |Behavior|Input|Output|
 |-----|-----|-----|
 |User is greeted and given option to register as new user or login as existing user|"home"|"localhost.5000/"|
-|User can search existing animals by Name|"Herman"|"5000/?name=herman"|
+|User can search existing animals by Name|"Jennifur"|"5000/?name=jennifur"|
 |User can search existing animals by Species|"Cat"|"5000/?Species=cat"|
+|User can search existing animals by Gender|"Female"|"5000/?Gender=female"|
 |User can search existing animals by Age|"5"|"5000/?Age=5"|
-|User can add animal via form submission |"Add New Animal"|"5000/animals/{animalId}"|
-|User can edit extising animal information|"Edit Listing"|"5000/edit/{animalId}"|
-|User can delete existing animals|"Delete Listing"|"5000/animals/{animalId}/delete"|
+|User can add animal via Postman POST request |"Add New Animal"|"5000/animals/"|
+|User can edit extising animal information via PUT request|"Edit"|"5000/animals/{animal id}"|
+|User can delete existing animals via POST request|"Delete Listing"|"5000/animals/{animalId}"|
 
 
 ## _Legal_
