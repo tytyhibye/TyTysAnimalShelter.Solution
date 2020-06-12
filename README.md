@@ -2,14 +2,14 @@
 
 ### _Created by Tyler Bates_
 
-## _Description_
+## Description
 
 TyTy's Animal Shelter is an API access application where registered users can view existing animals up for adoption or add new ones. Each entry includes the animal's Name, Species, Gender, Age, A brief Description, and an optional image url. Users can filter their searches to return only specified animals.
 <hr />
 
 ## _Setup/Installation Requirements_ 
 
-### To Host the API Server:
+## To Host the API Server:
 
 1. Clone this projects repository into your local directory following [these](https://www.linode.com/docs/development/version-control/how-to-install-git-and-clone-a-github-repository/) instructions.
 
@@ -39,7 +39,9 @@ dotnet watch run
 
 **The server is now live!**
 
-### To Access and Use Swagger UI:
+<hr />
+
+## To Access and Use Swagger UI:
 
 While the server is running, enter the following url into your browser:
 ```
@@ -55,7 +57,7 @@ Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan
 
 <hr />
 
-### _MySQL Installation & Configuration:_
+## MySQL Installation & Configuration:
 1. Download the [MySQL Community Server DMG file](https://dev.mysql.com/downloads/file/?id=484914) with the _"No thanks, just start my download"_ link.
 2. On the configuration page of the installer select the following options:
 * Use legacy password encryption
@@ -86,7 +88,7 @@ dotnet ef database update
 
 <div id="postMan">
 
-### _Postman Installation & Configuration:_
+## Postman Installation & Configuration:
 
 Postman is a resource for testing API calls, follow these steps to utilize this program:
 1. Download [Postman](https://www.postman.com/downloads/). (Sign up is _not_ required).
@@ -121,6 +123,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 ```
 
 </div>
+<hr />
 
 ## _Technology Used_
 
@@ -131,7 +134,9 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 ## <a href="https://github.com/swagger-api">Swagger</a>
 ## <a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a>
 
-## _Specs_
+<hr />
+
+## _Logistics / Specs_
 
 |Behavior|Input|Output|
 |-----|-----|-----|
@@ -144,6 +149,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 |User can edit extising animal information via PUT request|"Edit Listing"|"5000/animals/{animalId}"|
 |User can delete existing animals via POST request|"Delete Listing"|"5000/animals/{animalId}"|
 
+<hr />
 
 ## _Legal_
 
