@@ -36,19 +36,19 @@ namespace AnimalShelter.Controllers
 
       if (age > 0)
       {
-        query = query.Where(entry => entry.age == age);
+        query = query.Where(entry => entry.Age == age);
         // Console.WriteLine("we are in ages");
       }
       
       if (name != null)
       {
-        query = query.Where(entry => entry.name == name);
+        query = query.Where(entry => entry.Name == name);
         // Console.WriteLine("we are in name");
       }
 
       if (species != null)
       {
-        query = query.Where(entry => entry.species == species);
+        query = query.Where(entry => entry.Species == species);
         // Console.WriteLine("we are in species");
       }
 
@@ -99,7 +99,7 @@ namespace AnimalShelter.Controllers
     [HttpPut("{id}")] // edits existing api entry
     public void Put(int id, [FromBody] Animal animal)
     {
-      Animal.AnimalId = id;
+      animal.AnimalId = id;
       _db.Entry(animal).State = EntityState.Modified;
       _db.SaveChanges();
     }
