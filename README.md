@@ -104,6 +104,11 @@ You can filter your search using the following parameter keys:
 * _Gender_
 * _Age_
 
+_Search Example:_
+```sh
+http://localhost:5000/api/animals/?name=mr.meowgi
+```
+
 ## _Technology Used_
 
 ## <a href="https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29">C#</a>
