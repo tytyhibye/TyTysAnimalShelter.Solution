@@ -57,7 +57,7 @@ http://localhost:5004/swagger
 ```sh
 "AllowedHosts": "*",
   "ConnectionStrings": {
-    "DefaultConnection": "Server=localhost;Port=3306;database=travel_api;uid=root;pwd=[YOUR PASSWORD GOES HERE];"
+    "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid=root;pwd=[YOUR PASSWORD GOES HERE];"
   }
 ```
 7. Next, initiate a data migration by entering the following into your terminal:
