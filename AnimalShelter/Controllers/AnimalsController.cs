@@ -137,11 +137,12 @@ namespace AnimalShelter.Controllers
       List<int> list = new List<int> {};
       Random random = new Random();
 
-      foreach(int AnimalId in _db.Animals.AnimalId)
+      foreach(DataRow row in _db.Animals.AnimalId)
       {
-        list.Add(AnimalId);
+        list.Add(row["AnimalId"]);
+        Console.WriteLine(row["AnimalId"]);
       }
-      int result = random.Next(array.Length +1);  
+      int result = random.Next(list.Count +1);  
      
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == result);
     }
