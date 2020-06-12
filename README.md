@@ -52,8 +52,8 @@ Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan
 ### Swagger Functionality Includes:
 * **POST** requests to _user_ database to retrieve authentication token
 * **GET** requests to _animal_ database to return all/specific listings
-* **POST** requests to add or delete a database listing
 * **PUT** requests to edit an existing listing
+* **POST** requests to add or delete a database listing
 
 <hr />
 
