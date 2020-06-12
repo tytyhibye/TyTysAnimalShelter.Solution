@@ -122,12 +122,12 @@ You can filter your search using the following parameter keys:
 |Behavior|Input|Output|
 |-----|-----|-----|
 |User is greeted and given option to register as new user or login as existing user|"home"|"localhost.5000/"|
-|User can search existing animals by Name|"Jennifur"|"5000/?name=jennifur"|
-|User can search existing animals by Species|"Cat"|"5000/?Species=cat"|
-|User can search existing animals by Gender|"Female"|"5000/?Gender=female"|
-|User can search existing animals by Age|"5"|"5000/?Age=5"|
-|User can add animal via Postman POST request |"Add New Animal"|"5000/animals/"|
-|User can edit extising animal information via PUT request|"Edit"|"5000/animals/{animal id}"|
+|User can search existing animals by Name|"Key:Name, Value:Jennifur"|"5000/?name=jennifur"|
+|User can search existing animals by Species|"Key:Species, Value:Cat"|"5000/?Species=cat"|
+|User can search existing animals by Gender|"Key:Gender, Value:Female"|"5000/?Gender=female"|
+|User can search existing animals by Age|"Key:Age, Value:5"|"5000/?Age=5"|
+|User can add animal via Postman POST request |"Add New Listing"|"5000/animals/"|
+|User can edit extising animal information via PUT request|"Edit Listing"|"5000/animals/{animal id}"|
 |User can delete existing animals via POST request|"Delete Listing"|"5000/animals/{animalId}"|
 
 
