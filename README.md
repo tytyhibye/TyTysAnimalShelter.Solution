@@ -70,6 +70,35 @@ dotnet ef database update
 ```
 9. You should now be able to navigate through the full functionality of the project.
 
+### Postman Installation & Configuration
+
+Postman is another resource for testing API calls, follow these steps to utilize this program:
+1. Download [Postman](https://www.postman.com/downloads/). Sign up is _not_ required.
+2. Once the project is hosting to local server 5000, open Postman.
+3. To get your authorization token, make a **POST** request to _localhost:5000/api/users/authenticate_. The **Body** of the request will include the login information I've provided for you in the _users_ data table in MySQL Workbench.
+
+<div style="display: flex; justify-content: center"><img src="https://i.ibb.co/6gRmVRk/post-rq.jpg"></div>
+
+4. If sent correctly, your login information and Token will be displayed below like this:
+
+<div style="display: flex; justify-content: center"><img src="https://i.ibb.co/Lrt3rKR/token.jpg"></div>
+
+5. To use your Token for various **GET** requests, change the authorization type to _Bearer Token_ by selecting it on the following dropdown menu:
+
+<div style="display: flex; justify-content: center"><img src="https://i.ibb.co/JQ7T1pC/get.jpg"></div>
+
+6. Next, simply enter your token into the designated field on the right.
+
+<div style="display: flex; justify-content: center"><img src="https://i.ibb.co/61XrFPL/token2.jpg"></div>
+
+You now have full access to the API!
+
+You can filter your search using the following parameter keys:
+* _Name_
+* _Species_
+* _Gender_
+* _Age_
+
 ## _Technology Used_
 
 ## <a href="https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29">C#</a>
