@@ -76,12 +76,12 @@ dotnet ef migrations add DATABASE
 ```
 dotnet ef database update
 ```
-9. You should now be able to navigate through the full functionality of the project.
+9. You should now be able to view the full project database in MySQL Workbench.
 <hr />
 
 ### _Postman Installation & Configuration:_
 
-Postman is another resource for testing API calls, follow these steps to utilize this program:
+Postman is a resource for testing API calls, follow these steps to utilize this program:
 1. Download [Postman](https://www.postman.com/downloads/). (Sign up is _not_ required).
 2. Once the project API is live on _localhost:5000_, open Postman.
 3. To get your authorization token, make a **POST** request to _localhost:5000/api/users/authenticate_. The **Body** of the request will include the login information I've provided for you in the _users_ data table in MySQL Workbench.
