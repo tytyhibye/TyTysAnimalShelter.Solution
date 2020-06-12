@@ -23,6 +23,10 @@ namespace AnimalShelter.Controllers
       _db = db;
     }
 
+    /// <summary>
+    /// Returns a list of all available animals.
+    /// </summary>
+    /// <param name="id"></param>
     // GET api/Animals
     [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species, string gender) // binds query parameter to this string description
@@ -61,6 +65,10 @@ namespace AnimalShelter.Controllers
       return query.ToList(); 
     }
 
+    /// <summary>
+    /// Searches for a specific animal by Id.
+    /// </summary>
+    /// <param name="id"></param>
     // GET api/Animals/5
     [HttpGet("{id}")] //returns existing api entry
     public ActionResult<Animal> Get(int id)
@@ -69,7 +77,7 @@ namespace AnimalShelter.Controllers
     }
 
     /// <summary>
-    /// Creates a Animal.
+    /// Creates an animal listing.
     /// </summary>
     /// <remarks>
     /// Sample request:

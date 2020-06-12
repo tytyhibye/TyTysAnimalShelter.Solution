@@ -23,6 +23,22 @@ namespace AnimalShelter.Controllers
           _userService = userService;
       }
 
+      /// <summary>
+    /// Allows retrieval of user authentication token.
+    /// </summary>
+    /// <remarks>
+    /// Sample request:
+    ///     
+    ///     POST api/users/authenticate
+    ///     {
+    ///        "UserName": MyFavoriteInstructor,
+    ///        "Password": "YourPassword",
+    ///     }
+    /// </remarks>
+    /// <param name="User"></param>
+    /// <returns>User authentication token</returns>
+    /// <response code="201">Returns the users token</response>
+    /// <response code="401">The username and/or password are incorrect</response>
       [AllowAnonymous]
       [HttpPost("authenticate")]
       public IActionResult Authenticate([FromBody]User userParam)
