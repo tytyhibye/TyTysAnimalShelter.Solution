@@ -71,3 +71,12 @@ namespace AnimalShelter.Controllers
       _db.Animals.Add(animal);
       _db.SaveChanges();
     }
+
+    // PUT api/Animals/5
+    [HttpPut("{id}")] // edits existing api entry
+    public void Put(int id, [FromBody] Animal animal)
+    {
+      Animal.AnimalId = id;
+      _db.Entry(animal).State = EntityState.Modified;
+      _db.SaveChanges();
+    }
