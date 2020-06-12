@@ -31,7 +31,7 @@ namespace AnimalShelter.Controllers
     [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species, string gender) // binds query parameter to this string description
     {
-      Console.WriteLine("We are inside Animals controller");
+      // Console.WriteLine("We are inside Animals controller");
       var query = _db.Animals.AsQueryable(); // returns all Animals in database as a queryable LINQ object
       if (name == null && species == null && age == 0 && gender == null)
       {
@@ -129,6 +129,21 @@ namespace AnimalShelter.Controllers
       var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
       _db.Animals.Remove(animalToDelete);
       _db.SaveChanges();
+    }
+
+    [HttpGet("{id}")] //returns existing api entry
+    public ActionResult<Animal> GetRandom()
+    { 
+      List<int> list = new List<int> {};
+      Random random = new Random();
+
+      foreach(int AnimalId in _db.Animals.AnimalId)
+      {
+        list.Add(AnimalId);
+      }
+      int result = random.Next(array.Length +1);  
+     
+      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == result);
     }
   }
 }
