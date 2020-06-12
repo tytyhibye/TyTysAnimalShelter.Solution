@@ -61,3 +61,13 @@ namespace AnimalShelter.Controllers
     {
       return _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
     }
+
+    // POST api/Animals
+    [HttpPost] // adds new api entry
+    [ProducesResponseType(StatusCodes.Status201Created)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public void Post([FromBody] Animal animal)
+    {
+      _db.Animals.Add(animal);
+      _db.SaveChanges();
+    }
