@@ -57,6 +57,8 @@ Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan
 
 <hr />
 
+<div id="mySql">
+
 ## MySQL Installation & Configuration:
 1. Download the [MySQL Community Server DMG file](https://dev.mysql.com/downloads/file/?id=484914) with the _"No thanks, just start my download"_ link.
 2. On the configuration page of the installer select the following options:
@@ -86,6 +88,8 @@ dotnet ef database update
 9. You should now be able to view the full project database in MySQL Workbench.
 <hr />
 
+</div>
+
 <div id="postMan">
 
 ## Postman Installation & Configuration:
@@ -93,7 +97,7 @@ dotnet ef database update
 Postman is a resource for testing API calls, follow these steps to utilize this program:
 1. Download [Postman](https://www.postman.com/downloads/). (Sign up is _not_ required).
 2. Once the project API is live on _localhost:5000_, open Postman.
-3. To get your authorization token, make a **POST** request to _localhost:5000/api/users/authenticate_. The **Body** of the request will include the login information I've provided for you in the _users_ data table in MySQL Workbench.
+3. To get your authorization token, make a **POST** request to _localhost:5000/api/users/authenticate_. The **Body** of the request will include the login information I've provided for you in the _users_ data table in [MySQL Workbench](#mySql).
 
 <div style="display: flex; justify-content: center"><img src="https://i.ibb.co/6gRmVRk/post-rq.jpg"></div>
 
