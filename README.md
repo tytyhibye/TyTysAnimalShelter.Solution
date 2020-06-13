@@ -19,9 +19,11 @@ TyTy's Animal Shelter is a locally hosted API application built in C#/.NET core 
 ```sh
 dotnet -- version
 ``` 
-4. Still in the command line, enter
+4. Still in the command line, enter the following two commands:
 ```sh
 dotnet tool install -g 
+```
+```
 dotnet-script
 ```
 5. Download [ASP.NET Core](https://dotnet.microsoft.com/download) to enable live viewing on a local server
