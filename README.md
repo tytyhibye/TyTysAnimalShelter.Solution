@@ -72,10 +72,20 @@ Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan
 5. Open Local Instance 3306 with the password you set.
 6. Within the project directory, create a file called "appsettings.json" and fill it with the following code:
 ```sh
-"AllowedHosts": "*",
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
   "ConnectionStrings": {
     "DefaultConnection": "Server=localhost;Port=3306;database=animal_shelter;uid=root;pwd=[YOUR PASSWORD GOES HERE];"
+  },
+  "AppSettings": {
+    "Secret": "[INSERT 128 BIT SECRET STRING/PHRASE HERE]"
   }
+}
 ```
 7. Next, initiate a data migration by entering the following into your terminal:
 ```
