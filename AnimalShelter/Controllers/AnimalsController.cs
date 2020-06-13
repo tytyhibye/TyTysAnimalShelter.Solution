@@ -26,12 +26,12 @@ namespace AnimalShelter.Controllers
     /// <summary>
     /// Returns a list of all available animals.
     /// </summary>
-    /// <param name="id"></param>
+    
     // GET api/Animals
     [HttpGet]
     public ActionResult<IEnumerable<Animal>> Get(int age, string name, string species, string gender) // binds query parameter to this string description
     {
-      // Console.WriteLine("We are inside Animals controller");
+      
       var query = _db.Animals.AsQueryable(); // returns all Animals in database as a queryable LINQ object
       if (name == null && species == null && age == 0 && gender == null)
       {
@@ -41,25 +41,25 @@ namespace AnimalShelter.Controllers
       if (age > 0)
       {
         query = query.Where(entry => entry.Age == age);
-        // Console.WriteLine("we are in ages");
+        
       }
       
       if (name != null)
       {
         query = query.Where(entry => entry.Name == name);
-        // Console.WriteLine("we are in name");
+        
       }
 
       if (gender != null)
       {
         query = query.Where(entry => entry.Gender == gender);
-        // Console.WriteLine("we are in gender");
+        
       }
 
       if (species != null)
       {
         query = query.Where(entry => entry.Species == species);
-        // Console.WriteLine("we are in species");
+        
       }
 
       return query.ToList(); 
@@ -92,7 +92,6 @@ namespace AnimalShelter.Controllers
     ///        "Age": 5
     ///     }
     /// </remarks>
-    /// <param name="Animal"></param>
     /// <returns>A newly created Animal</returns>
     /// <response code="201">Returns the newly created Animal</response>
     /// <response code="400">If the Animal is null</response>
@@ -110,6 +109,7 @@ namespace AnimalShelter.Controllers
     /// Edits a specific animal.
     /// </summary>
     /// <param name="id"></param>
+    /// <param name="animal"></param>
     // PUT api/Animals/5
     [HttpPut("{id}")] // edits existing api entry
     public void Put(int id, [FromBody] Animal animal)
@@ -129,22 +129,6 @@ namespace AnimalShelter.Controllers
       var animalToDelete = _db.Animals.FirstOrDefault(entry => entry.AnimalId == id);
       _db.Animals.Remove(animalToDelete);
       _db.SaveChanges();
-    }
-
-    [HttpGet("{id}")] //returns existing api entry
-    public ActionResult<Animal> GetRandom()
-    { 
-      List<int> list = new List<int> {};
-      Random random = new Random();
-
-      foreach(DataRow row in _db.Animals.AnimalId)
-      {
-        list.Add(row["AnimalId"]);
-        Console.WriteLine(row["AnimalId"]);
-      }
-      int result = random.Next(list.Count +1);  
-     
-      return _db.Animals.FirstOrDefault(entry => entry.AnimalId == result);
     }
   }
 }

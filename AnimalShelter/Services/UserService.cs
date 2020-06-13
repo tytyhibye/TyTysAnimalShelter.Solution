@@ -31,15 +31,12 @@ namespace AnimalShelter.Services
 
         public User Authenticate(string username, string password)
         {
-            // Console.WriteLine($"\n\n\n\n\n" + $"here is username {username} and here is password {password}" + $"\n\n\n\n\n");
             var user = _users.Users.SingleOrDefault(x => x.Username == username && x.Password == password);
 
             // return null if user not found
             if (user == null)
               {
-            // Console.WriteLine($"\n\n\n\n\n" + "We are null" + $"\n\n\n\n\n");
-
-                return null;
+                  return null;
               }
             // authentication successful so generate jwt token
             var tokenHandler = new JwtSecurityTokenHandler();
