@@ -159,13 +159,13 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 |Behavior|Input|Output|
 |-----|-----|-----|
 |User can access Swagger UI index on running server|"/swagger"|"localhost.5000/swagger/index.html"|
-|User can search existing animals by Name|"Key:Name, Value:Jennifur"|"5000/?name=jennifur"|
-|User can search existing animals by Species|"Key:Species, Value:Cat"|"5000/?Species=cat"|
-|User can search existing animals by Gender|"Key:Gender, Value:Female"|"5000/?Gender=female"|
-|User can search existing animals by Age|"Key:Age, Value:5"|"5000/?Age=5"|
-|User can add animal via Postman POST request |"Add New Listing"|"5000/animals/"|
-|User can edit extising animal information via PUT request|"Edit Listing"|"5000/animals/{animalId}"|
-|User can delete existing animals via POST request|"Delete Listing"|"5000/animals/{animalId}"|
+|User can search existing animals by Name via GET request|"Key:Name, Value:Jennifur"|"5000/?name=jennifur"|
+|User can search existing animals by Species via GET request|"Key:Species, Value:Cat"|"5000/?Species=cat"|
+|User can search existing animals by Gender via GET request|"Key:Gender, Value:Female"|"5000/?Gender=female"|
+|User can search existing animals by Age via GET request|"Key:Age, Value:5"|"5000/?Age=5"|
+|User can add animal via Postman POST request | "{New Entry Information}"|"5000/animals/{animalId}"|
+|User can edit extising animal information via PUT request|"{Edited Entry Information}"|"5000/animals/{animalId}"|
+|User can delete existing animals via POST request|"{Animal Id} to be Deleted"|"5000/animals/{animalId}"|
 
 <hr />
 
