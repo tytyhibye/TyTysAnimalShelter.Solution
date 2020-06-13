@@ -4,7 +4,7 @@
 
 ## Description
 
-TyTy's Animal Shelter is an API access application where registered users can view existing animals up for adoption or add new ones. Each entry includes the animal's Name, Species, Gender, Age, A brief Description, and an optional image url. Users can filter their searches to return only specified animals.
+TyTy's Animal Shelter is a locally hosted API application built in C#/.NET core 2.2 utilizing token authentication and swagger documentation. Registered users can view existing listings of animals up for adoption and have the ability to add new listings. Each listing includes the animal's Name, Species, Gender, Age, A brief Description, and an optional image url. Users can filter their searches to return only specified animals and have the ability to delete listings once the animal has been adopted.
 <hr />
 
 ## _Setup/Installation Requirements_ 
