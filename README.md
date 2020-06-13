@@ -139,7 +139,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 </div>
 <hr />
 
-## _Technology Used_
+## Technology Used
 
 ## <a href="https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29">C#</a>
 ## <a href="https://en.wikipedia.org/wiki/.NET_Core">.NET Core</a>
@@ -152,7 +152,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 
 <hr />
 
-## _Logistics / Specs_
+## Logistics / Specs
 
 |Behavior|Input|Output|
 |-----|-----|-----|
@@ -167,7 +167,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 
 <hr />
 
-## _Legal_
+## Legal
 
 #### MIT License
 
