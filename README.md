@@ -70,7 +70,7 @@ Welcome to Swagger! Here you have the same capabilites as the [Postman](#postMan
 ```
 4. Download the [MySQL Workbench DMG file](https://dev.mysql.com/downloads/file/?id=484391)
 5. Open Local Instance 3306 with the password you set.
-6. Within the project directory, create a file called "appsettings.json" and fill it with the following code:
+6. Within the project directory, create a file called "appsettings.json" and populate it with the following code:
 ```sh
 {
   "Logging": {
@@ -143,10 +143,12 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 
 ## <a href="https://en.wikipedia.org/wiki/C_Sharp_%28programming_language%29">C#</a>
 ## <a href="https://en.wikipedia.org/wiki/.NET_Core">.NET Core</a>
-## <a href="https://www.postman.com/">Postman</a>
+## <a href="https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-3.1">ASP.NET Core MVC</a>
 ## <a href="https://docs.microsoft.com/en-us/dotnet/framework/data/adonet/ef/language-reference/entity-sql-language">Entity</a>
+## <a href="https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity?view=aspnetcore-3.1&tabs=visual-studio">Identity</a>
+## <a href="https://www.postman.com/">Postman</a>
 ## <a href="https://github.com/swagger-api">Swagger</a>
-## <a href="https://www.mysql.com/products/workbench/">MySQL Workbench</a>
+## <a href="https://www.mysql.com/products/workbench/">MySQL</a>
 
 <hr />
 
