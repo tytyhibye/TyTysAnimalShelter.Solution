@@ -158,7 +158,7 @@ http://localhost:5000/api/animals/?name=mr.meowgi
 
 |Behavior|Input|Output|
 |-----|-----|-----|
-|User is greeted and given option to register as new user or login as existing user|"home"|"localhost.5000/"|
+|User can access Swagger UI index on running server|"/swagger"|"localhost.5000/swagger/index.html"|
 |User can search existing animals by Name|"Key:Name, Value:Jennifur"|"5000/?name=jennifur"|
 |User can search existing animals by Species|"Key:Species, Value:Cat"|"5000/?Species=cat"|
 |User can search existing animals by Gender|"Key:Gender, Value:Female"|"5000/?Gender=female"|
